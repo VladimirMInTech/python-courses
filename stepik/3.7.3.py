@@ -13,9 +13,11 @@ def main():
     for word in input_words:
         if word not in verification_words:
             verification_words.append(word)
-    
+
     for i in verification_words:
         if i not in access_words:
             print(i)
+
+
 if __name__ == "__main__":
     main()

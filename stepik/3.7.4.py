@@ -13,6 +13,7 @@ def main():
             y -= int(distance)
     print(int(x), int(y))
 
+
 def main2():
     count_command = int(input())
     d = {"север": 0, "юг": 0, "восток": 0, "запад": 0}
@@ -20,7 +21,8 @@ def main2():
         input_str = input().split()
         d[input_str[0]] += int(input_str[1])
     # print(d['восток']-d['запад'], d['север'] - d['юг'])
-    print(d['восток']-d['запад'],d['север'] - d['юг'], sep=' ')
+    print(d['восток'] - d['запад'], d['север'] - d['юг'], sep=' ')
+
 
 if __name__ == "__main__":
     # main()

@@ -3,7 +3,7 @@ def main():
     results: dict = {}
     for i in range(count_games):
         match_result = input()
-        team1,score1,team2,score2 = match_result.split(';')
+        team1, score1, team2, score2 = match_result.split(';')
         score1, score2 = int(score1), int(score2)
 
         if team1 not in results:
@@ -18,7 +18,7 @@ def main():
             results[team1]['wins'] += 1
             results[team1]['points'] += 3
             results[team2]['losses'] += 1
-        elif  score1 < score2:
+        elif score1 < score2:
             results[team1]['losses'] += 1
             results[team2]['wins'] += 1
             results[team2]['points'] += 3
@@ -30,6 +30,7 @@ def main():
 
     for team, stats in results.items():
         print(f"{team}: {stats['games']} {stats['wins']} {stats['draws']} {stats['losses']} {stats['points']}")
+
 
 if __name__ == "__main__":
     main()
